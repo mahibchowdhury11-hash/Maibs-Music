@@ -1,0 +1,28 @@
+body {
+    background-color: black;
+    color: rgb(173, 172, 172);
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-around;
+    transition: color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+    margin: 0;
+}
+
+.topbar:hover {
+    color: black;
+    background-color: white;
+}
+
+h1 {
+    font-size: 500%;
+    transition: color 0.3s ease-in-out;
+}
+
+
+
+h1:hover {
+    color: white;
+}
