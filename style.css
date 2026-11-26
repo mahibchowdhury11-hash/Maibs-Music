@@ -16,6 +16,10 @@ html::-webkit-scrollbar {
     display: none;
 }
 
+a {
+    color: white;
+}
+
 /* Topbar */
 .topbar {
     display: flex;
@@ -145,6 +149,7 @@ html::-webkit-scrollbar {
     box-shadow: 0px 10px 30px (255,255,255,0.08);
     transform: rotate(-3deg);
     transition: transform 0.3s ease, border 0.3s ease, box shadow 0.3s ease;
+    transition: 0.3s ease-in-out;
 }
 
 .artist-row.reverse img {
@@ -152,13 +157,17 @@ html::-webkit-scrollbar {
 }
 
 .artist-row:hover {
-    transform: rotate(0deg) scale(1.1);
+    transform: rotate(3deg) scale(1.1);
     border: 2px solid white;
     box-shadow: 0px 10px 35px rgba(255,255,255, 0.2);
 }
 
+
+
 .artist-row img:hover {
     border: 2px solid gray;
+    border-radius: 50px;
+    transform: scale(1.5);
 }
 
 .artist-row:hover .artist-text {
