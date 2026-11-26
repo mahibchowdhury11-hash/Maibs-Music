@@ -1,28 +1,174 @@
+/* Base */
 body {
+    margin: 0;
+    min-height: 100vh;
     background-color: black;
-    color: rgb(173, 172, 172);
+    color: white;
+    font-family: 'Trebuchet MS', sans-serif;
+    overflow-x: hidden;
 }
 
+html {
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+/* Topbar */
 .topbar {
     display: flex;
+    background-color: rgb(19, 18, 18);
+    padding: 15px 35px;
     justify-content: space-around;
+    align-items: center;
+    border-bottom: 2px solid gray;
+    transition: 0.3s ease-in-out;
+}
+
+.topbar a {
+    color: white;
     transition: color 0.3s ease-in-out;
-    transition: background-color 0.3s ease-in-out;
-    margin: 0;
+}
+
+.topbar:hover a {
+    color: black;
 }
 
 .topbar:hover {
-    color: black;
     background-color: white;
 }
 
-h1 {
-    font-size: 500%;
-    transition: color 0.3s ease-in-out;
+.topbar h3 {
+
 }
 
+/* Head */
+.head {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(to bottom, rgb(25,25,25), black);
+}
 
+.head h1 {
+    font-size: 55px;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
 
-h1:hover {
+.head h2 {
+    color: silver;
+    font-size: 30px;
+}
+
+.head p {
+    color: gray;
+    font-size: 20px;
+}
+
+/* Music */
+
+.music {
+    max-width: 1150px;
+    margin: auto;
+    padding: 30px;
+}
+
+.music > h1 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 70px;
+}
+
+/* Artist Rows/Reverse Row */
+
+.artist-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 50px;
+    margin-bottom: 150px;
+    padding: 30px;
+    transition: 0.3s ease-in-out;
+}
+
+.artist-row.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Artist Text */
+
+.artist-text {
+    flex: 1;
+    max-width: 500px;
+    padding: 25px;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+
+.artist-text h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.artist-text p.genre {
+    color: gray;
+    font-size: 15px;
+    margin-top: 25px;
+}
+
+.artist-text h3 {
+    transition: 0.3s ease-in-out;
+}
+
+.artist-text:hover h3 {
+    transform:scale(2);
     color: white;
+}
+/* Genre */
+
+.genre {
+    color: gray;
+    font-size: 15px;
+    margin-top: 25px;
+}
+
+/* Images */
+.artist-row img {
+    width: 400px;
+    max-width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 2px solid rgb(70,70,70);
+    box-shadow: 0px 10px 30px (255,255,255,0.08);
+    transform: rotate(-3deg);
+    transition: transform 0.3s ease, border 0.3s ease, box shadow 0.3s ease;
+}
+
+.artist-row.reverse img {
+    transform: rotate(3deg);
+}
+
+.artist-row:hover {
+    transform: rotate(0deg) scale(1.1);
+    border: 2px solid white;
+    box-shadow: 0px 10px 35px rgba(255,255,255, 0.2);
+}
+
+.artist-row img:hover {
+    border: 2px solid gray;
+}
+
+.artist-row:hover .artist-text {
+    transform: translateY(-5px);
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: rgb(20, 20, 20);
+    border-top: 2px solid gray;
+    color: gray;
 }
