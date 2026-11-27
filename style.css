@@ -20,6 +20,10 @@ a {
     color: white;
 }
 
+h1:hover {
+    transform: scale(1.3);
+}
+
 /* Topbar */
 .topbar {
     display: flex;
@@ -180,4 +184,45 @@ footer {
     background-color: rgb(20, 20, 20);
     border-top: 2px solid gray;
     color: gray;
+}
+
+/* Go Back button */
+
+.back a {
+    display: inline-block;
+    color: black;
+    padding: 15px 15px;
+    background-color: white;
+    border: 2px solid gray;
+    border-radius: 50px;
+    margin-left: 25px;
+    transition: 0.3s ease-in;
+}
+
+.back:hover a{
+    background-color: black;
+    color: white;
+    rotate: 15deg;
+}
+
+.song-info img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 1px solid gray;
+}
+
+.song-text h2 {
+    margin-bottom: 5px;
+}
+
+.song-text p {
+    color: gray;
+    margin-top: 0;
+}
+
+.player audio {
+    width: 100%;
+    margin-top: 10px;
 }
