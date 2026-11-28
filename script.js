@@ -1,23 +1,30 @@
 {
-    const optionImages = document.querySelectorAll(".options img");
-    const statusText = document.getElementById("playing");
-    const audioPlayer = document.getElementById("audio-player");
+    let optionImages = document.querySelectorAll(".options img");
+    let statusText = document.getElementById("playing");
+    let audioPlayer = document.getElementById("audio-player");
 
-    if (optionImages.length > 0 && statusText) {
-        optionImages.forEach((img) => {
-            img.style.cursor = "pointer";
+    optionImages.forEach(function(img) {
 
-            img.addEventListener("click", () => {
-                const artist = img.dataset.artist || img.alt || "Artist";
-                const song = img.dataset.song || "a song";
+        img.style.cursor = "pointer";
 
-                statusText.textContent = `Playing "${song}" by ${artist}...`;
+        img.addEventListener("click", function() {
 
-                if (audioPlayer && img.dataset.src) {
-                    audioPlayer.src = img.dataset.src;
-                    audioPlayer.play().catch(() => {});
-                }
+            let artist = img.dataset.artist;
+            let song = img.dataset.song || "a song";
+            let music = img.dataset.src;
+
+            statusText.textContent = "Loading " + song + " by " + artist;
+
+            audioPlayer.src = music;
+            audioPlayer.load();
+
+            audioPlayer.play().then(function() {
+                statusText.textContent = "Playing " + song + " by " + artist;
+            }).catch(function() {
+                statusText.textContent = "Could not play the song. Check the music file path!";
             });
+
         });
-    }
+
+    });
 }
