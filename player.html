@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Music Player</title>
+            <link rel="stylesheet" href="style.css">
+            <link rel="stylesheet" href="player.css">
+
+        </head>
+
+        <body>
+        <div class="back">
+            <h3><a href="index.html">Go Back</a></h3>
+        </div>
+
+            <center><h1>Music Player</h1></center>
+                
+                <center><p>Listen to music!</p></center>
+
+<main class="player">
+
+<div class="options">
+    <img src="images/mj.png" data-artist="Micheal Jackson" data-src="music/mj.mp3">
+    <img src="images/sabrina.jpg" data-artist="Sabrina Carpenter" data-song="Esspresso" data-src="music/sabrina.mp3">
+    <img src="images/uzi.jpg" data-artist="Lil Uzi Vert" data-song="20 Mins" data-src="music/uzi.mp3">
+    <img src="images/glaive.jpg" data-artist="Glaive" data-song="The Prom" data-src="music/glaive.mp3">
+</div>
+
+        <div class="player-img">
+            <img src="images/cd.png" alt="Music CD Player">
+        </div>
+
+
+        <p id="playing">Click on an artist to play a song</p>
+
+        <audio id="audio-player" controls>
+            <source src="music/placeholder.mp3">
+        </audio>
+
+</main>
+
+<script src="script.js"></script>
+        </body>
+    </html>

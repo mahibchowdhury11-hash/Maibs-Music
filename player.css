@@ -1,0 +1,92 @@
+/* Base */
+
+body {
+    background-color:rgb(255, 145, 0);
+}
+
+.back {
+    margin-top: 25px;
+}
+
+p {
+    margin: 50px;
+}
+
+/* Audio Player */
+
+.player-img {
+    float: right;
+}
+
+.player {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    max-width: 80vw;
+    margin: 20px auto;
+    padding: 25px;
+    background-color: rgb(85, 63, 30);
+    border: 2px solid orange;
+    border-radius: 30px;
+    box-shadow: 0px 5px 15px rgba(255,255,255, 0.08);
+    transition: 0.3s ease-in-out;
+}
+
+.player:hover {
+    border-color: white;
+    box-shadow: 20px 20px 20px rgba(255, 255, 255, 0.15);
+    transform: translateY(-25px);
+}
+
+.player-img {
+    margin: 0 auto;
+}
+
+.player audio {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Options */
+
+.options img {
+    border-radius: 20px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    transition: 0.3s ease-in-out;
+}
+
+.options img:hover {
+    width: 250px;
+    height: 250px;
+    border: 5px solid black;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: repeat(2, 150px);
+    gap: 25px;
+}
+
+.options img:nth-child(1):hover {
+    z-index: 10;
+    transform: scale(1.15);
+}
+
+.options img:nth-child(2):hover {
+    z-index:10;
+    transform: scale(1.15);
+}
+
+.options img:nth-child(3):hover {
+    z-index: 10;
+    transform: scale(1.15);
+}
+
+.options img:nth-child(4):hover {
+    z-index: 10;
+    transform: scale(1.15);
+}
